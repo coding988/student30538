@@ -1,0 +1,8 @@
+---
+title: "problem set 1"
+author: "Mahnoor Arif"
+input_file : 'ps1.qmd'  
+output_format : 'pdf'
+---
+
+

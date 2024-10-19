@@ -1,0 +1,11 @@
+---
+title: "Untitled"
+format: pdf
+---
+
+```{python}
+import pandas as pd
+```
+```{python}
+tickets_data = pd.read_csv('C:\\Users\\arifm\\OneDrive\\Documents\\GitHub\\student30538\\PS2\\parking_tickets_one_percent.csv')
+```

@@ -1,0 +1,25 @@
+Variable,NA_Count
+Unnamed: 0,0
+ticket_number,0
+issue_date,0
+violation_location,0
+license_plate_number,0
+license_plate_state,97
+license_plate_type,2054
+zipcode,54115
+violation_code,0
+violation_description,0
+unit,29
+unit_description,0
+vehicle_make,0
+fine_level1_amount,0
+fine_level2_amount,0
+current_amount_due,0
+total_payments,0
+ticket_queue,0
+ticket_queue_date,0
+notice_level,84068
+hearing_disposition,259899
+notice_number,0
+officer,0
+address,0
