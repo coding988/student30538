@@ -3,7 +3,7 @@ name: Mahnoor Arif
 title: "PS2_Mahnoor Arif"
 format: html
 ---
-
+##1 TOKEN USED##
 
 
 ```{python}
@@ -537,13 +537,35 @@ print(non_doubling_violations[['violation_description', 'paid_fine', 'unpaid_fin
 ##Explanation for 4.1
 ##Negative Increases:
 
-##For some violations (e.g., 20' OF CROSSWALK), the increase_if_unpaid is negative, meaning that the unpaid fine is lower than the paid fine by about $1.29. This is unusual since typically, one would expect unpaid fines to be at least equal to or greater than the paid fines.
+##For some violations (e.g., 20' OF CROSSWALK), the 
+
+# increase_if_unpaid is negative, meaning that the unpaid fine
+ 
+# is lower than the paid fine by about $1.29. This is unusual 
+
+# since typically, one would expect unpaid fines to be at least 
+
+# equal to or greater than the paid fines.
 
 ##Positive Increases:
 
-##Violations like TRUCK,RV,BUS, OR TAXI RESIDENTIAL STREET show a positive increase of about $6.17. This indicates that the fine for unpaid tickets is higher than that for paid tickets, which might suggest that certain violations have a small increase for unpaid tickets but do not double in price.
+##Violations like TRUCK,RV,BUS, OR TAXI RESIDENTIAL STREET show 
+# 
+# a positive increase of about $6.17. This indicates that the 
+# 
+# fine for unpaid tickets is higher than that for paid tickets, 
+# 
+# which might suggest that certain violations have a small 
+# 
+# increase for unpaid tickets but do not double in price.
 
-##Not Doubling: Out of the 66 violations listed, none follow the typical doubling rule for unpaid tickets. Instead, many have either a slight increase, no increase, or even a decrease in the unpaid fine compared to the paid fine.
+##Not Doubling: Out of the 66 violations listed, none follow the 
+# 
+# typical doubling rule for unpaid tickets. Instead, many have 
+# 
+# either a slight increase, no increase, or even a decrease in 
+# 
+# the unpaid fine compared to the paid fine.
 ```
 
 
@@ -619,6 +641,19 @@ scatter_with_labels + text_labels
 
 ```
 
+
+```{python}
+##4.2
+from IPython.display import Image
+Image(filename=r'C:\Users\arifm\OneDrive\Documents\GitHub\student30538\PS2\PS2_1.jpg')
+
+
+```
+
+```{python}
+#4.2
+Image(filename=r'C:\Users\arifm\OneDrive\Documents\GitHub\student30538\PS2\PS2_1.jpg')
+```
 
 ```{python}
 #4.3(b)
