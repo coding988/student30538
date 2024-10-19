@@ -100,22 +100,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>##1 TOKEN USED##</p>
-<div id="4409e139" class="cell" data-execution_count="1">
+<div id="27042450" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> altair <span class="im">as</span> alt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="3bbbd25b" class="cell" data-execution_count="2">
+<div id="6a9abdc2" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>tickets_data <span class="op">=</span> pd.read_csv(<span class="st">'C:</span><span class="ch">\\</span><span class="st">Users</span><span class="ch">\\</span><span class="st">arifm</span><span class="ch">\\</span><span class="st">OneDrive</span><span class="ch">\\</span><span class="st">Documents</span><span class="ch">\\</span><span class="st">GitHub</span><span class="ch">\\</span><span class="st">student30538</span><span class="ch">\\</span><span class="st">PS2</span><span class="ch">\\</span><span class="st">parking_tickets_one_percent.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>C:\Users\arifm\AppData\Local\Temp\ipykernel_14360\413930792.py:1: DtypeWarning: Columns (7) have mixed types. Specify dtype option on import or set low_memory=False.
+<pre><code>C:\Users\arifm\AppData\Local\Temp\ipykernel_17184\413930792.py:1: DtypeWarning: Columns (7) have mixed types. Specify dtype option on import or set low_memory=False.
   tickets_data = pd.read_csv('C:\\Users\\arifm\\OneDrive\\Documents\\GitHub\\student30538\\PS2\\parking_tickets_one_percent.csv')</code></pre>
 </div>
 </div>
-<div id="9819a26b" class="cell" data-execution_count="3">
+<div id="b857a037" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!pip install altair_saver</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>##Data cleaning continued (15 points)</p>
-<div id="1aa623f5" class="cell" data-execution_count="4">
+<div id="bf82085f" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#1.1</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 2: Define a function to count NAs for each column</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> count_na_per_column(dataframe):</span>
@@ -163,22 +163,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 23                address         0</code></pre>
 </div>
 </div>
-<div id="886a8a4d" class="cell" data-execution_count="5">
+<div id="578cce66" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#1.2</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co">#The three variables with most missing values include: notice_level, hearing_disposition and zip_code##  The reason why many have blank values because possibly due to data entry constraints. If antering exact details of these variables is not mandatory, then these fields most likely to be omitted during data entry.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="0f502b47" class="cell" data-execution_count="6">
+<div id="50dbda64" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#1.3</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co">## New code: 0964125B</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co">## old code: 0964125</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="a788efe3" class="cell" data-execution_count="7">
+<div id="d5ffe272" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#1.4</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co">#NO CITY STICKER OR IMPROPER DISPLAY    $ 120</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co">#NO CITY STICKER VEHICLE UNDER/EQUAL TO 16,000 LBS. $200</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="33599213" class="cell" data-execution_count="8">
+<div id="ea7ada2d" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">##2.1</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co">#import pandas as pd</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co">#import altair as alt</span></span>
@@ -217,7 +217,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the chart</span></span>
 <span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a>chart.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>C:\Users\arifm\AppData\Local\Temp\ipykernel_14360\1099920220.py:15: SettingWithCopyWarning: 
+<pre><code>C:\Users\arifm\AppData\Local\Temp\ipykernel_17184\1099920220.py:15: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
@@ -227,23 +227,23 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="cell-output cell-output-display">
 
 <style>
-  #altair-viz-4c768abed89d4b1aa71759b3e8491d9b.vega-embed {
+  #altair-viz-11b46335d14448fcbd93c17450a4b4c1.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-4c768abed89d4b1aa71759b3e8491d9b.vega-embed details,
-  #altair-viz-4c768abed89d4b1aa71759b3e8491d9b.vega-embed details summary {
+  #altair-viz-11b46335d14448fcbd93c17450a4b4c1.vega-embed details,
+  #altair-viz-11b46335d14448fcbd93c17450a4b4c1.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-4c768abed89d4b1aa71759b3e8491d9b"></div>
+<div id="altair-viz-11b46335d14448fcbd93c17450a4b4c1"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-4c768abed89d4b1aa71759b3e8491d9b") {
-      outputDiv = document.getElementById("altair-viz-4c768abed89d4b1aa71759b3e8491d9b");
+    if (outputDiv.id !== "altair-viz-11b46335d14448fcbd93c17450a4b4c1") {
+      outputDiv = document.getElementById("altair-viz-11b46335d14448fcbd93c17450a4b4c1");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -293,7 +293,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </script>
 </div>
 </div>
-<div id="2cab96fe" class="cell" data-execution_count="9">
+<div id="9f7354b2" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">##2.2</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co">#import pandas as pd</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co">#import altair as alt</span></span>
@@ -338,23 +338,23 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="cell-output cell-output-display">
 
 <style>
-  #altair-viz-574eaa0bd3cb4aac9e8fc2741ef2cfbb.vega-embed {
+  #altair-viz-43313680bf0747399f9175e3e3f0a158.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-574eaa0bd3cb4aac9e8fc2741ef2cfbb.vega-embed details,
-  #altair-viz-574eaa0bd3cb4aac9e8fc2741ef2cfbb.vega-embed details summary {
+  #altair-viz-43313680bf0747399f9175e3e3f0a158.vega-embed details,
+  #altair-viz-43313680bf0747399f9175e3e3f0a158.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-574eaa0bd3cb4aac9e8fc2741ef2cfbb"></div>
+<div id="altair-viz-43313680bf0747399f9175e3e3f0a158"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-574eaa0bd3cb4aac9e8fc2741ef2cfbb") {
-      outputDiv = document.getElementById("altair-viz-574eaa0bd3cb4aac9e8fc2741ef2cfbb");
+    if (outputDiv.id !== "altair-viz-43313680bf0747399f9175e3e3f0a158") {
+      outputDiv = document.getElementById("altair-viz-43313680bf0747399f9175e3e3f0a158");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -404,7 +404,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </script>
 </div>
 </div>
-<div id="8b7915c2" class="cell" data-execution_count="10">
+<div id="6340ccaf" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">##2.3</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Ticket count in the 1% sample</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>ticket_count_sample <span class="op">=</span> <span class="dv">175</span>  <span class="co"># The number of tickets in the 1% sample</span></span>
@@ -451,7 +451,7 @@ City Clerk's Claimed Revenue Increase: $16,000,000
 The projected increase falls short by $14,600,000.00.</code></pre>
 </div>
 </div>
-<div id="d6e5330e" class="cell" data-execution_count="11">
+<div id="062d8f18" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">##2.4</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co">#import pandas as pd</span></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co">#import altair as alt</span></span>
@@ -539,23 +539,23 @@ Change in Revenue: $500289.80</code></pre>
 <div class="cell-output cell-output-display">
 
 <style>
-  #altair-viz-42a3125959c0430bbae8d85780bd0556.vega-embed {
+  #altair-viz-11535b6cbee0407381b117d5b63f2858.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-42a3125959c0430bbae8d85780bd0556.vega-embed details,
-  #altair-viz-42a3125959c0430bbae8d85780bd0556.vega-embed details summary {
+  #altair-viz-11535b6cbee0407381b117d5b63f2858.vega-embed details,
+  #altair-viz-11535b6cbee0407381b117d5b63f2858.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-42a3125959c0430bbae8d85780bd0556"></div>
+<div id="altair-viz-11535b6cbee0407381b117d5b63f2858"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-42a3125959c0430bbae8d85780bd0556") {
-      outputDiv = document.getElementById("altair-viz-42a3125959c0430bbae8d85780bd0556");
+    if (outputDiv.id !== "altair-viz-11535b6cbee0407381b117d5b63f2858") {
+      outputDiv = document.getElementById("altair-viz-11535b6cbee0407381b117d5b63f2858");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -605,7 +605,7 @@ Change in Revenue: $500289.80</code></pre>
 </script>
 </div>
 </div>
-<div id="272f280b" class="cell" data-execution_count="12">
+<div id="416b7d40" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">##2.5</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co">#import pandas as pd</span></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co">#import altair as alt</span></span>
@@ -676,23 +676,23 @@ Change in Revenue: $500289.80</code></pre>
 <div class="cell-output cell-output-display">
 
 <style>
-  #altair-viz-735330c1fc3f4b90bc722f12394de611.vega-embed {
+  #altair-viz-81cca9f793b04cdaa8cdc86d0bcdf888.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-735330c1fc3f4b90bc722f12394de611.vega-embed details,
-  #altair-viz-735330c1fc3f4b90bc722f12394de611.vega-embed details summary {
+  #altair-viz-81cca9f793b04cdaa8cdc86d0bcdf888.vega-embed details,
+  #altair-viz-81cca9f793b04cdaa8cdc86d0bcdf888.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-735330c1fc3f4b90bc722f12394de611"></div>
+<div id="altair-viz-81cca9f793b04cdaa8cdc86d0bcdf888"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-735330c1fc3f4b90bc722f12394de611") {
-      outputDiv = document.getElementById("altair-viz-735330c1fc3f4b90bc722f12394de611");
+    if (outputDiv.id !== "altair-viz-81cca9f793b04cdaa8cdc86d0bcdf888") {
+      outputDiv = document.getElementById("altair-viz-81cca9f793b04cdaa8cdc86d0bcdf888");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -746,7 +746,7 @@ Change in Revenue: $500289.80</code></pre>
 Average Repayment Rate After Price Increase: 9.55%</code></pre>
 </div>
 </div>
-<div id="290d0103" class="cell" data-execution_count="13">
+<div id="d6d19939" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">#2.6</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co">##The other type of violation types whose prices should be increased should be the ones that are occuring with the highest average frequency AND have positive repayment rates, compared to the rest. The violations with the highest frequency are: "Expired plates or temporary", "Street Cleaning" and "Residential permit parking". However, they have zero repayment rates.</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -797,23 +797,23 @@ Average Repayment Rate After Price Increase: 9.55%</code></pre>
 <div class="cell-output cell-output-display">
 
 <style>
-  #altair-viz-0253343babed4f68a26483b75321cee2.vega-embed {
+  #altair-viz-46373d67a66e4769adf4cdfe187c6b95.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-0253343babed4f68a26483b75321cee2.vega-embed details,
-  #altair-viz-0253343babed4f68a26483b75321cee2.vega-embed details summary {
+  #altair-viz-46373d67a66e4769adf4cdfe187c6b95.vega-embed details,
+  #altair-viz-46373d67a66e4769adf4cdfe187c6b95.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-0253343babed4f68a26483b75321cee2"></div>
+<div id="altair-viz-46373d67a66e4769adf4cdfe187c6b95"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-0253343babed4f68a26483b75321cee2") {
-      outputDiv = document.getElementById("altair-viz-0253343babed4f68a26483b75321cee2");
+    if (outputDiv.id !== "altair-viz-46373d67a66e4769adf4cdfe187c6b95") {
+      outputDiv = document.getElementById("altair-viz-46373d67a66e4769adf4cdfe187c6b95");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -870,7 +870,7 @@ Average Repayment Rate After Price Increase: 9.55%</code></pre>
 90                 RESIDENTIAL PERMIT PARKING          23683             0.0</code></pre>
 </div>
 </div>
-<div id="ce9e0ab3" class="cell" data-execution_count="14">
+<div id="18de6346" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">##3.1</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="co"># tickets_data = pd.read_csv('path_to_your_data.csv')</span></span>
@@ -906,7 +906,7 @@ Average Repayment Rate After Price Increase: 9.55%</code></pre>
 109           4789  </code></pre>
 </div>
 </div>
-<div id="46b42e2e" class="cell" data-execution_count="15">
+<div id="1913f827" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">#3.2</span></span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create DataFrame</span></span>
@@ -933,26 +933,26 @@ Average Repayment Rate After Price Increase: 9.55%</code></pre>
 <span id="cb23-24"><a href="#cb23-24" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb23-25"><a href="#cb23-25" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb23-26"><a href="#cb23-26" aria-hidden="true" tabindex="-1"></a>scatter_plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="69">
+<div class="cell-output cell-output-display" data-execution_count="42">
 
 <style>
-  #altair-viz-69ef524851ea4c8686e44b606d356d44.vega-embed {
+  #altair-viz-a8b38aef382540b68d2532d9f0184ba1.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-69ef524851ea4c8686e44b606d356d44.vega-embed details,
-  #altair-viz-69ef524851ea4c8686e44b606d356d44.vega-embed details summary {
+  #altair-viz-a8b38aef382540b68d2532d9f0184ba1.vega-embed details,
+  #altair-viz-a8b38aef382540b68d2532d9f0184ba1.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-69ef524851ea4c8686e44b606d356d44"></div>
+<div id="altair-viz-a8b38aef382540b68d2532d9f0184ba1"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-69ef524851ea4c8686e44b606d356d44") {
-      outputDiv = document.getElementById("altair-viz-69ef524851ea4c8686e44b606d356d44");
+    if (outputDiv.id !== "altair-viz-a8b38aef382540b68d2532d9f0184ba1") {
+      outputDiv = document.getElementById("altair-viz-a8b38aef382540b68d2532d9f0184ba1");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -1002,7 +1002,7 @@ Average Repayment Rate After Price Increase: 9.55%</code></pre>
 </script>
 </div>
 </div>
-<div id="6ca537c5" class="cell" data-execution_count="16">
+<div id="f69cb533" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">#3.2</span></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Bar Plot for Average Fine and Line Plot for Repayment Rate</span></span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>bar_plot <span class="op">=</span> alt.Chart(violation_df).mark_bar(opacity<span class="op">=</span><span class="fl">0.6</span>, color<span class="op">=</span><span class="st">'blue'</span>).encode(</span>
@@ -1019,26 +1019,26 @@ Average Repayment Rate After Price Increase: 9.55%</code></pre>
 <span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>combined_plot <span class="op">=</span> bar_plot <span class="op">+</span> line_plot</span>
 <span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>combined_plot.configure_axisX(labelAngle<span class="op">=</span><span class="dv">45</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="70">
+<div class="cell-output cell-output-display" data-execution_count="43">
 
 <style>
-  #altair-viz-427bb5bf3b71404589319ba4f40e4064.vega-embed {
+  #altair-viz-f74798efda124f078a4986586ffc4f57.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-427bb5bf3b71404589319ba4f40e4064.vega-embed details,
-  #altair-viz-427bb5bf3b71404589319ba4f40e4064.vega-embed details summary {
+  #altair-viz-f74798efda124f078a4986586ffc4f57.vega-embed details,
+  #altair-viz-f74798efda124f078a4986586ffc4f57.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-427bb5bf3b71404589319ba4f40e4064"></div>
+<div id="altair-viz-f74798efda124f078a4986586ffc4f57"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-427bb5bf3b71404589319ba4f40e4064") {
-      outputDiv = document.getElementById("altair-viz-427bb5bf3b71404589319ba4f40e4064");
+    if (outputDiv.id !== "altair-viz-f74798efda124f078a4986586ffc4f57") {
+      outputDiv = document.getElementById("altair-viz-f74798efda124f078a4986586ffc4f57");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -1088,7 +1088,7 @@ Average Repayment Rate After Price Increase: 9.55%</code></pre>
 </script>
 </div>
 </div>
-<div id="4c989ec6" class="cell" data-execution_count="17">
+<div id="f149932c" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">#3.2</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Box Plot for Distribution of Average Fine Amounts</span></span>
@@ -1100,26 +1100,26 @@ Average Repayment Rate After Price Increase: 9.55%</code></pre>
 <span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>box_plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="71">
+<div class="cell-output cell-output-display" data-execution_count="44">
 
 <style>
-  #altair-viz-73430521eb0647db80bcf1937d2e152e.vega-embed {
+  #altair-viz-c6bf6ec294f146868242f689915c28d6.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-73430521eb0647db80bcf1937d2e152e.vega-embed details,
-  #altair-viz-73430521eb0647db80bcf1937d2e152e.vega-embed details summary {
+  #altair-viz-c6bf6ec294f146868242f689915c28d6.vega-embed details,
+  #altair-viz-c6bf6ec294f146868242f689915c28d6.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-73430521eb0647db80bcf1937d2e152e"></div>
+<div id="altair-viz-c6bf6ec294f146868242f689915c28d6"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-73430521eb0647db80bcf1937d2e152e") {
-      outputDiv = document.getElementById("altair-viz-73430521eb0647db80bcf1937d2e152e");
+    if (outputDiv.id !== "altair-viz-c6bf6ec294f146868242f689915c28d6") {
+      outputDiv = document.getElementById("altair-viz-c6bf6ec294f146868242f689915c28d6");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -1169,11 +1169,21 @@ Average Repayment Rate After Price Increase: 9.55%</code></pre>
 </script>
 </div>
 </div>
-<div id="cb2c8180" class="cell" data-execution_count="18">
+<div id="6ce17c5e" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co">#3.3</span></span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="co">#The scatterplot seems the most meaningful in this context to analyse the relationship between fine amount and repayment rate. It clearly shows that repayment rates declines as avg fine increases. It also shows the variance between different types of violations in repayment rates for the same average fine.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="co">#The scatterplot seems the most meaningful in this context</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="co">#  to analyse the relationship between fine amount </span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="co"># and repayment rate. It clearly shows that </span></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="co"># repayment rates declines as avg fine increases.</span></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a><span class="co">#  It also shows the variance between different types of</span></span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a><span class="co">#  violations in repayment rates for the same average fine.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="f26c6b10" class="cell" data-execution_count="19">
+<div id="7912c1aa" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co">#4.1</span></span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="co">#import pandas as pd</span></span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1228,7 +1238,7 @@ Average Repayment Rate After Price Increase: 9.55%</code></pre>
 [66 rows x 4 columns]</code></pre>
 </div>
 </div>
-<div id="ef95a1ff" class="cell" data-execution_count="20">
+<div id="bdcef359" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co">##Explanation for 4.1</span></span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="co">##Negative Increases:</span></span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1262,7 +1272,7 @@ Average Repayment Rate After Price Increase: 9.55%</code></pre>
 <span id="cb29-31"><a href="#cb29-31" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
 <span id="cb29-32"><a href="#cb29-32" aria-hidden="true" tabindex="-1"></a><span class="co"># the unpaid fine compared to the paid fine.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="5eae6196" class="cell" data-execution_count="21">
+<div id="1a7fd35e" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co">#4.2</span></span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="co">##Identifying top-ten violations</span></span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1284,11 +1294,11 @@ Average Repayment Rate After Price Increase: 9.55%</code></pre>
 9    BURGLAR ALARM SOUNDING OVER 4 MINUTES  Other</code></pre>
 </div>
 </div>
-<div id="47fbcce1" class="cell" data-execution_count="22">
+<div id="56bfcbbc" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> altair <span class="im">as</span> alt</span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="c068ff16" class="cell" data-execution_count="23">
+<div id="3442bf73" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co">##4.3</span></span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="co">#label every dot with adjacent text</span></span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1332,26 +1342,26 @@ Average Repayment Rate After Price Increase: 9.55%</code></pre>
 <span id="cb33-41"><a href="#cb33-41" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-42"><a href="#cb33-42" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine scatter and text labels</span></span>
 <span id="cb33-43"><a href="#cb33-43" aria-hidden="true" tabindex="-1"></a>scatter_with_labels <span class="op">+</span> text_labels</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="77">
+<div class="cell-output cell-output-display" data-execution_count="50">
 
 <style>
-  #altair-viz-2233864c9e0a435b8e84b68f2ca6dbbe.vega-embed {
+  #altair-viz-ea1cc54739734fffa311949d1c9f3973.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-2233864c9e0a435b8e84b68f2ca6dbbe.vega-embed details,
-  #altair-viz-2233864c9e0a435b8e84b68f2ca6dbbe.vega-embed details summary {
+  #altair-viz-ea1cc54739734fffa311949d1c9f3973.vega-embed details,
+  #altair-viz-ea1cc54739734fffa311949d1c9f3973.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-2233864c9e0a435b8e84b68f2ca6dbbe"></div>
+<div id="altair-viz-ea1cc54739734fffa311949d1c9f3973"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-2233864c9e0a435b8e84b68f2ca6dbbe") {
-      outputDiv = document.getElementById("altair-viz-2233864c9e0a435b8e84b68f2ca6dbbe");
+    if (outputDiv.id !== "altair-viz-ea1cc54739734fffa311949d1c9f3973") {
+      outputDiv = document.getElementById("altair-viz-ea1cc54739734fffa311949d1c9f3973");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -1401,11 +1411,11 @@ Average Repayment Rate After Price Increase: 9.55%</code></pre>
 </script>
 </div>
 </div>
-<div id="fffba8fb" class="cell" data-execution_count="24">
+<div id="992c7689" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co">##4.2</span></span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> Image</span>
 <span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>Image(filename<span class="op">=</span><span class="vs">r'C:\Users\arifm\OneDrive\Documents\GitHub\student30538\PS2\PS2_1.jpg'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="78">
+<div class="cell-output cell-output-display" data-execution_count="51">
 <div>
 <figure class="figure">
 <p><img src="PS2_files/figure-html/cell-25-output-1.jpeg" class="img-fluid figure-img"></p>
@@ -1413,10 +1423,11 @@ Average Repayment Rate After Price Increase: 9.55%</code></pre>
 </div>
 </div>
 </div>
-<div id="eac3499a" class="cell" data-execution_count="25">
+<div id="e1af5b1f" class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co">#4.2</span></span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>Image(filename<span class="op">=</span><span class="vs">r'C:\Users\arifm\OneDrive\Documents\GitHub\student30538\PS2\PS2_1.jpg'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="79">
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> Image</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>Image(filename<span class="op">=</span><span class="vs">r'C:\Users\arifm\OneDrive\Documents\GitHub\student30538\PS2\PS2_2.jpg'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="52">
 <div>
 <figure class="figure">
 <p><img src="PS2_files/figure-html/cell-26-output-1.jpeg" class="img-fluid figure-img"></p>
@@ -1424,7 +1435,7 @@ Average Repayment Rate After Price Increase: 9.55%</code></pre>
 </div>
 </div>
 </div>
-<div id="09d1659f" class="cell" data-execution_count="26">
+<div id="d3354c38" class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co">#4.3(b)</span></span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Define categories for violation descriptions</span></span>
@@ -1455,26 +1466,26 @@ Average Repayment Rate After Price Increase: 9.55%</code></pre>
 <span id="cb36-28"><a href="#cb36-28" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb36-29"><a href="#cb36-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a legend to show categories</span></span>
 <span id="cb36-30"><a href="#cb36-30" aria-hidden="true" tabindex="-1"></a>scatter_with_categories</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="80">
+<div class="cell-output cell-output-display" data-execution_count="53">
 
 <style>
-  #altair-viz-474b409fc9c140349df932e00fca0466.vega-embed {
+  #altair-viz-92d672f3a9404d6aa11b568fb925b5a3.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-474b409fc9c140349df932e00fca0466.vega-embed details,
-  #altair-viz-474b409fc9c140349df932e00fca0466.vega-embed details summary {
+  #altair-viz-92d672f3a9404d6aa11b568fb925b5a3.vega-embed details,
+  #altair-viz-92d672f3a9404d6aa11b568fb925b5a3.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-474b409fc9c140349df932e00fca0466"></div>
+<div id="altair-viz-92d672f3a9404d6aa11b568fb925b5a3"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-474b409fc9c140349df932e00fca0466") {
-      outputDiv = document.getElementById("altair-viz-474b409fc9c140349df932e00fca0466");
+    if (outputDiv.id !== "altair-viz-92d672f3a9404d6aa11b568fb925b5a3") {
+      outputDiv = document.getElementById("altair-viz-92d672f3a9404d6aa11b568fb925b5a3");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -1524,7 +1535,7 @@ Average Repayment Rate After Price Increase: 9.55%</code></pre>
 </script>
 </div>
 </div>
-<div id="ffb2f340" class="cell" data-execution_count="27">
+<div id="717f4448" class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co">##BONUS QUESTION Q1</span></span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a></span>

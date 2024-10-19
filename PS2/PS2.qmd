@@ -500,7 +500,17 @@ box_plot
 
 ```{python}
 #3.3
-#The scatterplot seems the most meaningful in this context to analyse the relationship between fine amount and repayment rate. It clearly shows that repayment rates declines as avg fine increases. It also shows the variance between different types of violations in repayment rates for the same average fine.
+#The scatterplot seems the most meaningful in this context
+# 
+#  to analyse the relationship between fine amount 
+# 
+# and repayment rate. It clearly shows that 
+# 
+# repayment rates declines as avg fine increases.
+# 
+#  It also shows the variance between different types of
+# 
+#  violations in repayment rates for the same average fine.
 ```
 
 
@@ -652,7 +662,8 @@ Image(filename=r'C:\Users\arifm\OneDrive\Documents\GitHub\student30538\PS2\PS2_1
 
 ```{python}
 #4.2
-Image(filename=r'C:\Users\arifm\OneDrive\Documents\GitHub\student30538\PS2\PS2_1.jpg')
+from IPython.display import Image
+Image(filename=r'C:\Users\arifm\OneDrive\Documents\GitHub\student30538\PS2\PS2_2.jpg')
 ```
 
 ```{python}
